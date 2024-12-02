@@ -1,0 +1,44 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registrar cita</title>
+        <link rel="stylesheet" href="registro.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Bienvenido registra tu cita</h1>
+            <form action="insertarr.php" method="post">
+                <label for="Estilista">Estilistas:</label>
+                <select id="Estilista" name="Estilista" required>
+                    <option value="Maribel">Maribel: experta en peinados y maquillaje.</option> 
+                    <option value="Alejandro">Alejandro: Especialista en tratamientos faciales.</option>
+                    <option value="Karla">Karla: Experta en cortes, peinados, color de tinte y tratamiento de cabello.</option>
+                    <option value="Ana">Ana: Especialista en Manicura y pedicura.</option>
+                    <option value="Daniel">Daniel: Experto en corte de cabello, afeitado y arreglo de barba para hombres.</option>
+                </select><br/>
+                <label for="Nomcliente">Nombre del cliente:</label>
+                <input type="text" id="Nomcliente" name="Nomcliente" required>
+                <label for="Fecha">Fecha:</label>
+                <input type="date" id="Fecha" name="Fecha" required>
+                <label for="Hora">Hora:</label>
+                <input type="time" id="Hora" name="Hora" required>
+            </select><br/>
+                <label for="Servicio">Servicio:</label>
+                <select name="Servicio" required>
+                    <option value="Limpieza facial">Limpieza Facial $599</option>
+                    <option value="Corte de cabello">Corte de cabello $120</option>
+                    <option value="Tinte de cabello">Tinte de cabello $220</option>
+                    <option value="Depilacion facial y corporal">Depilación facial y corporal $60</option>
+                    <option value="Manicura">Manicura $300</option>
+                    <option value="Pedicura">Pedicura $320</option>
+                    <option value="Afeitado de barba">Afeitado de barba $85</option>
+                    <option value="Peinados">Peinados $250</option>
+                </select><br/>
+                <button type="submit">Registrar cita</button>
+            </form>
+            <br>
+            <button onclick="window.location.href='Estetica.html';">Regresar a la pagina principal</button>
+        </div>
+    </body>
+</html>

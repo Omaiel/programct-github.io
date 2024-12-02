@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('fondoweb.jpg');
+    background-size: cover;
+}
+
+h1 {
+    color: #15A3EF;
+    text-align: center;
+    text-shadow: 
+        1px 1px 0 white, 
+        -1px -1px 0 white, 
+        -1px 1px 0 white, 
+        1px -1px 0 white, 
+        1px 0 0 white, 
+        0 1px 0 white, 
+        -1px 0 0 white, 
+        0 -1px 0 white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+p {
+    text-align: center;
+    color: purple;
+    font-size: 29px;
+}
+
+.producto-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.producto-btn {
+    padding: 10px 20px;
+    background-color: #15A3EF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.producto-btn:hover {
+    background-color: #0E87D2;
+    transform: scale(1.05);
+}
+
+form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+label {
+    color: #15A3EF;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #15A3EF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0E87D2;
+    transform: scale(1.05);
+}

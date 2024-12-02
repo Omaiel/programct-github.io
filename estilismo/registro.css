@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(fonodoh1.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #fff;
+}
+
+div {
+    background-color: #4e3629; /* Marrón oscuro elegante */
+}
+
+form {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco suave */
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 550px;
+    width: 100%;
+    padding: 20px;
+    background-color: #d8c0a0; /* Marrón claro cálido */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    border: 1px solid ; /* Marrón dorado suave */
+    border-radius: 3px;
+    background-color: white; /* Marrón claro */
+}
+
+button {
+    background-color: #6f4f29; /* Marrón chocolate */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4e3629; /* Marrón oscuro */
+}

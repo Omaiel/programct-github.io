@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estética París</title>
+    <style>
+        :root {
+    --primary: #9370DB;
+    --secondary: sienna;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: Mulish;
+    font-size: 16px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.logo{
+    width: 150px;
+    height: auto;
+}
+
+h3 {
+    text-align: center;
+    color: sienna;
+    letter-spacing: 1em;
+}
+
+h1 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgba(244, 241, 240, 0.956);
+    border-width: sienna 5px solid;
+    text-align: center;
+    background-color: sienna;
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(2, 2, 2, 0.1);
+    max-width: 85%;
+    margin: 20px auto;
+    margin-top: 50px;
+}
+
+hr {
+    width: 100%;
+    height: 5px;
+    background-color:sienna;
+    border: none;
+    margin: 20px auto;
+}
+
+button {
+    margin-top: auto;
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d8a060;
+}
+
+.background {
+    align-items: stretch;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 75rem;
+    gap: 1rem; 
+}
+
+.articles article {
+    max-width: 20rem;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rosybrown;    
+}
+
+.articles article a {
+    display: inline-flex;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.articles article h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.6rem;
+    color: var(--secondary);
+    transition: color 0.3s ease-out;
+}
+
+.articles article img {
+    max-width: 100%;
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out;
+}
+
+.article-preview {
+    padding: 2rem; 
+    background: white;
+}
+.articles figure {
+    width: 100%;
+    height: 13rem;
+    overflow: hidden;
+}
+
+.articles figure img {
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    object-fit: cover;
+}
+.articles article .card-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: above; 
+    height: 100%; 
+    padding: 2rem; 
+  }
+.articles article:hover img {
+    transform: scale(1.5);
+}
+.justified-text {
+    text-align: justify;
+}
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.section p {
+    color: #666666;
+}
+.container {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-icons i {
+    font-size: 1.5em;
+    color: sienna;
+}
+
+    </style>
+    <!-- FontAwesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <h3>BIENVENIDO A NUESTRA ESTÉTICA "PARÍS"</h3>
+    <hr>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Logo de Estética París" class="logo">
+        </div>
+    </header>
+    <h1>Estética París</h1>
+    <button onclick="window.location.href='catalogo.html'" class="menu-btn">Catálogo</button>
+    <button onclick="window.location.href='citas.html'" class="menu-btn">Registrar cita</button>
+    <button onclick="window.location.href='estilistas.html'" class="menu-btn">Estilistas</button>
+    <button onclick="window.location.href='sugerencias.html'" class="menu-btn">Sugerencias</button>
+    <div class="background">
+        <div class="centering">
+            <div class="articles">
+                <article>
+                    <figure>
+                        <img src="TCarni.jpg" alt="Preview">
+                    </figure>
+                    <div class="article-preview">
+                        <h2>Faciales</h2>
+                        <p class="justified-text">
+                            Un facial es un tratamiento completo para el cuidado de la piel del rostro que ayuda a mejorar su apariencia y salud. Consiste en una limpieza profunda, exfoliación, extracción de impurezas, aplicación de mascarillas personalizadas y, generalmente, un masaje relajante. Además, se usan productos específicos para hidratar, nutrir y revitalizar la piel, dejándola radiante, suave y con un aspecto renovado.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="Menudo.jpg" alt="Preview">
+                    </figure>
+                    <div class="article-preview">
+                        <h2>Cabello</h2>
+                        <p class="justified-text">
+                            Un corte de cabello implica el diseño y remodelación del cabello según el estilo deseado por el cliente. El servicio incluye una consulta inicial para identificar el tipo de corte que mejor se adapte a la forma del rostro, tipo de cabello y preferencias personales. Luego, se realiza el corte, que puede ser un recorte de puntas, un cambio de estilo o una transformación completa. Finaliza con un peinado para resaltar el nuevo look.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="cemita.jpg" alt="Preview">
+                    </figure>
+                    <div class="article-preview">
+                        <h2>Paquetes</h2>
+                        <p class="justified-text">
+                            Un paquete de salón de belleza es un servicio integral que reúne varias opciones de belleza en una sola sesión para ofrecer una experiencia completa de cuidado personal. Normalmente incluye un corte de cabello, un facial, tratamiento capilar (como hidratación profunda o queratina), y servicios adicionales como manicure y pedicure. Este paquete está diseñado para brindar un cuidado completo de la cabeza a los pies, ideal para ocasiones especiales o como un regalo para consentirse.
+                            <a href="#" ></a>
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="title">Contacto</h3>
+    
+    <div class="section">
+        <h4><i class="fas fa-envelope"></i> Correo Electrónico</h4>
+        <p class="justified-text">salonpariszm@gmail.com</p>
+    </div>
+    
+    <div class="section">
+        <h4><i class="fas fa-phone-alt"></i> Teléfono</h4>
+        <p class="justified-text">246 155 3697</p>
+    </div>
+    
+    <div class="section">
+        <h4><i class="fas fa-clock"></i> Horarios</h4>
+        <p class="justified-text">Lunes a Domingo: </p>
+            <p> 8:00 a.m - 8:00 p.m.</p>
+    </div>
+    
+    <div class="section">
+        <h4><i class="fas fa-map-marker-alt"></i> Ubicación</h4>
+        <p class="justified-text">Arboleda #6, Tlaxcala de Xicohténcatl, México, 90105</p>
+    </div>
+    
+</body>
+</html

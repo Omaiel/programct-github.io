@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Servicios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-image: url('fondoweb.jpg');
+      background-size: cover;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .title {
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #503b2c;
+      border: 2px solid #503b2c; 
+      margin: 4rem; 
+      background-color: bisque ; 
+}
+
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .card {
+      background-color: #f8f1e5;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-title {
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: #4A3C31;
+    }
+
+    .card-description {
+      color: #6B4F3B;
+    }
+
+    .card-price {
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: #4A3C31;
+    }
+
+    .button {
+      background-color: #C97D5D;
+      color: white;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      border: none;
+    }
+
+    .button:hover {
+      background-color: #A75F42;
+    }
+
+    .selected-service {
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .icon-heart {
+      margin-right: 0.5rem;
+      color: #f43f5e;
+    }
+
+    .back-button {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #6B4F3B;
+      color: white;
+      font-weight: bold;
+      border-radius: 0.25rem;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      background-color: #4A3C31;
+    }
+    .justified-text {
+    text-align: justify;
+}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="title">Catálogo de servicios</h1>
+  <div class="grid" id="serviceCatalog">
+  </div>
+
+  <div id="selectedService" class="selected-service" style="display: none;">
+    <h2 class="card-title">Servicio seleccionado</h2>
+    <p class="justified-text" id="selectedDescription" class="card-description"></p>
+    <p  class="justified-text" id="selectedPrice" class="card-price"></p>
+  </div>
+
+  <a href="Estetica.html" class="back-button">Regresar</a>
+</div>
+
+<script>
+  const services = [
+    { id: 1, name: 'Corte de cabello', description: 'Corte de cabello para hombre y mujer.', price: '$120', image: 'corte.jpg' },
+    { id: 2, name: 'Tinte de cabello', description: 'Tinte de cabello para hombre y mujer.', price: '$220', image: 'tinte.jpg' },
+    { id: 3, name: 'Manicura', description: 'Manicura para mujer.', price: '$300', image: 'manicura.jpg' },
+    { id: 4, name: 'Pedicura', description: 'Pedicura para hombre y mujer.', price: '$320', image: 'pedicure.jpg' },
+    { id: 5, name: 'Depilación', description: 'Depilación para hombre y mujer ya sea facial o corporal.', price: '$60', image: 'depilacion.jpg' },
+    { id: 6, name: 'Facial', description: 'Limpieza facial para hombre y mujer que combate los signos del envejecimiento, estimula la producción de colágeno y elastina en las capas dérmicas.', price: '$599', image: 'facial.jpg' },
+    { id: 7, name: 'Barba', description: 'Afeitado y arreglo de barba para hombres.', price: '$85', image: 'barba.jpg' },
+    { id: 8, name: 'Peinados', description:  'Peinados para eventos.', price: '$250', image: 'peinado.jpg' },
+  ];
+
+  function displayServices() {
+    const catalog = document.getElementById('serviceCatalog');
+    catalog.innerHTML = '';
+
+    services.forEach(service => {
+      const serviceCard = document.createElement('div');
+      serviceCard.classList.add('card');
+      serviceCard.innerHTML = `
+        <figure>
+          <img src="${service.image}" alt="${service.name}" style="width: 100%; height: auto; border-radius: 0.5rem;">
+        </figure>
+        <h2 class="card-title">${service.name}</h2>
+        <p  class="justified-text" class="card-description">${service.description}</p>
+        <p class="card-price">${service.price}</p>
+        <button class="button" onclick="selectService(${service.id})">
+          <span class="icon-heart">❤</span> Seleccionar
+        </button>
+      `;
+      catalog.appendChild(serviceCard);
+    });
+  }
+
+  function selectService(serviceId) {
+    const selectedService = services.find(service => service.id === serviceId);
+    document.getElementById('selectedDescription').innerText = selectedService.description;
+    document.getElementById('selectedPrice').innerText = selectedService.price;
+    document.getElementById('selectedService').style.display = 'block';
+  }
+
+  displayServices();
+</script>
+
+</body>
+</html>
